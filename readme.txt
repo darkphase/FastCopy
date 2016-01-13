@@ -1,45 +1,35 @@
 ﻿======================================================================
-                     FastCopy  ver3.11                 2015/12/06
-                                            H.Shirouzu（白水啓章）
+                   FastCopy  ver3.11                   2015/12/06
+                                                 SHIROUZU Hiroaki
 ======================================================================
 
-特徴：
-	Windows系最速(?) のファイルコピー＆削除ツールです。
+	FastCopy is the Fastest Copy/Delete Software on Windows.
 
-	NT系OS の場合、UNICODE でしか表現できないファイル名や MAX_PATH
-	(260文字) を越えた位置のファイルもコピー（＆削除）できます。
+	It can copy/delete unicode and over MAX_PATH(260byte) pathname files.
 
-	自動的に、コピー元とコピー先が、同一の物理HDD or 別HDD かを判定
-	した後、以下の動作を行います。
+	It always run by multi-threading.
 
-		別HDD 間：
-			マルチスレッドで、読み込みと書き込みを並列に行う
+	It don't use MFC, it is compact and don't requre mfcxx.dll.
 
-		同一HDD 間：
-			コピー元から（バッファが一杯になるまで）連続読み込み後、
-			コピー先に連続して書き込む
+	FastCopy is GPLv3 license, you can modify and use under GPLv3
 
-	Read/Write も、OS のキャッシュを全く使わないため、他のプロセス
-	（アプリケーション）が重くなりにくくなっています。
+License:
+	-------------------------------------------------------------------------
+	 FastCopy ver3.0
+	 Copyright(C) 2004-2015 SHIROUZU Hiroaki All rights reserved.
 
-	可能な限り大きな単位で Read/Write するため、デバイスの限界に
-	近いパフォーマンスが出ます。
+	 This program is free software. You can redistribute it and/or modify
+	 it under the GNU General Public License version 3.
 
-	Include/Exclude フィルタ（UNIXワイルドカード形式）が指定可能です。
+	 If you want to distribute your modified version, but you don't want to
+	 distribute the modified source code, please contact shirouzu@ipmsg.org
 
-	MFC 等のフレームワークを使わず、Win32API だけで作っていますので、
-	軽量＆コンパクト＆軽快に動作します。
+	 more details: license-gpl3.txt
+	-------------------------------------------------------------------------
 
-ライセンス：
-	全ソースコードは GPLv3 で公開しています。
-	VC++ 等をお持ちであれば、ご自由にカスタマイズしてのご利用も
-	可能です。（カスタマイズ版の配布をソースコード非公開で行いたい
-	場合は別途、お問い合わせください）
-	詳しくは同梱の license.txt をご覧ください。
+Usage：
+	Please see fastcopy.chm
 
-使用法等：
-	ヘルプ(fastcopy.chm) を参照してください。
-
-ソース・ビルドについて：
-	VS2015 以降でビルドできます。
+Build:
+	VS2015 or later
 
